@@ -1,0 +1,124 @@
+#menu {
+    .b-tab {
+        display: none;
+    }
+
+    .b-tab.active {
+        display: flex;
+
+        @media (max-width: $mq-tablet) {
+            display: block;
+        }
+    }
+
+    .menu-column_1 {
+        width: 50%;
+        margin: 0 40px;
+
+        @media (max-width: $mq-tablet) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .illu_right2 {
+        position: absolute;
+        right: -280px;
+        bottom: -280px;
+
+        @media (max-width: $mq-desktop) {
+            display: none;
+        }
+    }
+
+    .illu_left2 {
+        position: absolute;
+        left: -280px;
+        bottom: -280px;
+
+        @media (max-width: $mq-desktop) {
+            display: none;
+        }
+    }
+}
+
+.container-menu_select {
+    text-align: center;
+    margin-top: 50px;
+
+    li {
+        list-style: none;
+        color: $black;
+        font-family: $secondaryFont;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        position: relative;
+        display: inline-block;
+        padding: 0 20px;
+        cursor: pointer;
+
+        @media (max-width: $mq-mobile) {
+            display: block;
+            padding: 10px 0;
+            border-bottom: solid 2px $primaryColor;
+            border-top: solid 2px $primaryColor;
+            margin: -2px 0;
+        }
+
+        &:after {
+            content: "";
+            background-color: $primaryColor;
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+
+            @media (max-width: $mq-mobile) {
+                background-color: inherit;
+            }
+        }
+
+        &:last-child {
+
+            &:after {
+                content: "";
+                background-color: inherit;
+            }
+        }
+    }
+
+    .b-nav-tab.active {
+        color: $secondaryColor;
+    }
+}
+
+.container_menu {
+    text-align: left;
+    color: $black;
+    margin: 40px 0 53px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @media (max-width: $mq-tablet) {
+        display: block;
+    }
+
+    .btn_menu {
+        text-align: center;
+        width: 100%;
+    }
+
+    h3 {
+        margin-top: 50px;
+
+        @media (max-width: $mq-tablet) {
+            margin-top: 20px;
+        }
+    }
+
+
+
+}

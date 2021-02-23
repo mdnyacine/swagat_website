@@ -1,0 +1,47 @@
+header {
+    height: 100vh;
+    background: url(/images/background_1.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+
+
+    .content {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 85vh;
+        text-align: center;
+        text-transform: uppercase;
+        background: url(/images/logo_background.png) no-repeat center top;
+
+        // .logo-background {
+        //     $height: 488.87px;
+        //     $positionLogo: round(-$height/2);
+        //     background: url(/images/logo_background.png) no-repeat center;
+        //     width: 726.8px;
+        //     height: $height;
+        //     margin: 0 auto $positionLogo auto;
+        // }
+
+        p {
+            margin: 0;
+            font-family: $primaryFont;
+            font-size: 47px;
+
+            @media (max-width: $mq-small) {
+                font-size: 30px;
+            }
+        }
+
+        .btn {
+            @include default-btn(22px, 47px, $primaryColor, $primaryColor, transparent);
+            transition: 200ms;
+            opacity: 0;
+
+            &:hover {
+                @include default-btn(22px, 47px, $primaryColor, $white, $primaryColor);
+            }
+        }
+    }
+}

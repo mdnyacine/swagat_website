@@ -1,0 +1,18 @@
+@mixin default-a {
+    text-decoration: none;
+    color: $white;
+    text-transform: uppercase;
+}
+
+@mixin default-btn($size, $marginTop, $bordercolor, $color, $backgroundColor) {
+    border: 2px solid $bordercolor;
+    color: $color;
+    background-color: $backgroundColor;
+    margin: $marginTop auto 0 auto;
+    font-size: $size;
+    line-height: 30px;
+    padding: 5px 13px;
+    width: 170px;
+    display: block;
+    text-align: center;
+}
